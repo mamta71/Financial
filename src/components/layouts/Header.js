@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <>
       <div className="flex justify-between items-center">
-        <h3 className="text-3xl font-extralight text-white/50">Groups</h3>
+        <h3 className="text-3xl font-extralight text-white/50">Financial Management System</h3>
         <div className="inline-flex items-center space-x-2">
           <a className="bg-gray-900 text-white/50 p-2 rounded-md hover:text-white smooth-hover" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
