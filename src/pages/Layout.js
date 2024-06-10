@@ -17,8 +17,8 @@ const Layout = () => {
       </div>
 {/* <Header/> */}
       <Sidebar />
-      <div className="flex justify-end p-4">
-        <div className="bg-gray-100 w-[80%]">
+      <div className="flex justify-end p-4 bg-gray-100">
+        <div className=" w-[80%]">
           <div className="min-h-[calc(100vh-183px)]">
             {/* Main content */}
             <Outlet />

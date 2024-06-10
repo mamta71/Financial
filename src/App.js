@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from './pages/Layout';
 import Dashboard from './pages/Dashboard';
-import Contact from './pages/Contact';
+import Budget from './pages/Budget';
 
 function App() {
   return (
@@ -11,8 +11,7 @@ function App() {
    <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
-          <Route path="contact" element={<Contact />} />
-          {/* <Route path="/contact" element={<Contact />} />  */}
+         <Route path="budget" element={<Budget />} />  
         </Route>
       </Routes>
   </BrowserRouter>

@@ -3,18 +3,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    // <div>
-    //   <div className="bg-blue-600">
-    //     <span
-    //       className="absolute text-white text-4xl top-5 left-4 cursor-pointer"
-    //       onclick="openSidebar()"
-    //     >
-    //       <i className="bi bi-filter-left px-2 bg-gray-900 rounded-md"></i>
-    //     </span>
-
-    //   </div>
-    // </div>
-    <div>
+     <div>
       <div className="sidebar fixed top-0 bottom-0 lg:left-0 p-2 w-[20%] overflow-y-auto text-center bg-gray-900">
         <div className="text-gray-100 text-xl">
           <div className="p-2.5 mt-1 flex items-center">
@@ -40,14 +29,12 @@ const Sidebar = () => {
         <Link to="/">
           <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
             <i className="bi bi-house-door-fill me-2"></i>
-            {/* <span className="text-[15px] ml-4 text-gray-200 font-bold"> */}
-            DashBoard
-            {/* </span> */}
+               DashBoard
           </div>
         </Link>
 
-        <Link to="/contact">
-          <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
+<Link to="/budget">
+        <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
             <svg
               class="h-5 w-5 text-white-900 me-2"
               viewBox="0 0 24 24"
@@ -60,15 +47,10 @@ const Sidebar = () => {
               {" "}
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
-            Contact
+            Budget
           </div>
-        </Link>
-
-        
-       
-         
-       
-      </div>
+          </Link>
+           </div>
     </div>
   );
 };
