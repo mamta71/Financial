@@ -1,5 +1,3 @@
-// App.js
-
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './routes'; // Import the AppRoutes component
@@ -9,7 +7,7 @@ import Sidebar from './components/layouts/Sidebar';
 function App() {
   return (
     <BrowserRouter>
-      <div className="app">
+      <div className="app min-h-80vh">
         <div className="bg-gray-900 min-h-screen flex items-center justify-center">
           <div className="bg-gray-800 flex-1 flex flex-col space-y-5 lg:space-y-0 lg:flex-row lg:space-x-10 max-w-6xl sm:p-6 sm:my-10 sm:mx-4 sm:rounded-2xl">
             <Sidebar />
