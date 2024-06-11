@@ -1,20 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Layout from './pages/Layout';
-import Dashboard from './pages/Dashboard';
-import Budget from './pages/Budget';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './routes'; // Import the AppRoutes component
+import Header from './components/layouts/Header';
+import Sidebar from './components/layouts/Sidebar';
 
 function App() {
   return (
-  <BrowserRouter>
-   <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Dashboard />} />
-         <Route path="budget" element={<Budget />} />  
-        </Route>
-      </Routes>
-  </BrowserRouter>
+    <BrowserRouter>
+      <div className="app min-h-80vh">
+        <div className="bg-gray-900 min-h-screen flex items-center justify-center">
+          <div className="bg-gray-800 flex-1 flex flex-col space-y-5 lg:space-y-0 lg:flex-row lg:space-x-10 max-w-6xl sm:p-6 sm:my-10 sm:mx-4 sm:rounded-2xl">
+            <Sidebar />
+            <div className="flex-1 px-2 sm:px-0">
+              <Header />
+              {/* Main Container */}
+              <AppRoutes />
+            </div>
+          </div>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
