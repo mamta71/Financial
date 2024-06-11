@@ -11,8 +11,8 @@ const Sidebar = () => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `text-white/50 p-4 inline-flex justify-center rounded-md smooth-hover ${
-              isActive ? 'bg-gray-800 text-white' : 'hover:bg-gray-800 hover:text-white'
+            `p-4 inline-flex justify-center rounded-md smooth-hover ${
+              isActive ? 'bg-gray-800 text-white' : 'text-white/50 hover:bg-gray-800 hover:text-white'
             }`
           }
         >
@@ -23,8 +23,8 @@ const Sidebar = () => {
         <NavLink
           to="/budget"
           className={({ isActive }) =>
-            `text-white/50 p-4 inline-flex justify-center rounded-md smooth-hover ${
-              isActive ? 'bg-gray-800 text-white' : 'hover:bg-gray-800 hover:text-white'
+            `p-4 inline-flex justify-center rounded-md smooth-hover ${
+              isActive ? 'bg-gray-800 text-white' : 'text-white/50  hover:bg-gray-800 hover:text-white'
             }`
           }
         >
@@ -35,8 +35,8 @@ const Sidebar = () => {
         <NavLink
           to="/user"
           className={({ isActive }) =>
-            `text-white/50 p-4 inline-flex justify-center rounded-md smooth-hover ${
-              isActive ? 'bg-gray-800 text-white' : 'hover:bg-gray-800 hover:text-white'
+            `p-4 inline-flex justify-center rounded-md smooth-hover ${
+              isActive ? 'bg-gray-800 text-white' : 'text-white/50  hover:bg-gray-800 hover:text-white'
             }`
           }
         >
