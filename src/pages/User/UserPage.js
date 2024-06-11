@@ -13,43 +13,46 @@ const UserPage = () => {
             </a>
             <a className="text-white/50 group-hover:text-white group-hover:smooth-hover text-center" href="#">Add New User</a>
         </div>
-        <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover">
+
+        
+        {/* user container */}
+        <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover transition-all duration-300 hover:scale-110">
             <img className="w-20 h-20 object-cover object-center rounded-full" src={profileImage} alt="user" />
             <h4 className="text-white text-2xl font-bold capitalize text-center">Rahul Pandey</h4>
             <p className="text-white/50">55 members</p>
-            <p className="absolute top-2 text-white/20 inline-flex items-center text-xs">Online <span className="ml-2 w-2 h-2 block bg-green-500 rounded-full group-hover:animate-pulse"></span></p>
+            <p className="absolute top-2 text-white/20 inline-flex items-center text-xs">Online <span className="ml-2 w-2 h-2 block bg-green-500 rounded-full group-hover:animate-pulse animate-pulse"></span></p>
         </div>
-        <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover">
+        <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover transition-all duration-300 hover:scale-110">
             <img className="w-20 h-20 object-cover object-center rounded-full" src={profileImage} alt="user" />
             <h4 className="text-white text-2xl font-bold capitalize text-center">Gaurav</h4>
             <p className="text-white/50">132 members</p>
             <p className="absolute top-2 text-white/20 inline-flex items-center text-xs">Online <span className="ml-2 w-2 h-2 block bg-green-500 rounded-full group-hover:animate-pulse"></span></p>
         </div>
-        <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover">
+        <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover transition-all duration-300 hover:scale-110">
             <img className="w-20 h-20 object-cover object-center rounded-full" src={profileImage} alt="user" />
             <h4 className="text-white text-2xl font-bold capitalize text-center">Sarita</h4>
             <p className="text-white/50">207 members</p>
             <p className="absolute top-2 text-white/20 inline-flex items-center text-xs">offline<span className="ml-2 w-2 h-2 block bg-red-400 rounded-full group-hover:animate-pulse"></span></p>
         </div>
-        <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover">
+        <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover transition-all duration-300 hover:scale-110">
             <img className="w-20 h-20 object-cover object-center rounded-full" src={profileImage} alt="user" />
             <h4 className="text-white text-2xl font-bold capitalize text-center">Avin</h4>
             <p className="text-white/50">105 members</p>
             <p className="absolute top-2 text-white/20 inline-flex items-center text-xs">Online <span className="ml-2 w-2 h-2 block bg-green-500 rounded-full group-hover:animate-pulse"></span></p>
         </div>
-        <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover">
+        <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover transition-all duration-300 hover:scale-110">
             <img className="w-20 h-20 object-cover object-center rounded-full" src={profileImage} alt="user" />
             <h4 className="text-white text-2xl font-bold capitalize text-center">Suraya</h4>
             <p className="text-white/50">67 members</p>
             <p className="absolute top-2 text-white/20 inline-flex items-center text-xs">Online <span className="ml-2 w-2 h-2 block bg-green-500 rounded-full group-hover:animate-pulse"></span></p>
         </div>
-        <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover">
+        <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover transition-all duration-300 hover:scale-110">
             <img className="w-20 h-20 object-cover object-center rounded-full" src={profileImage} alt="user" />
             <h4 className="text-white text-2xl font-bold capitalize text-center">Gautam</h4>
             <p className="text-white/50">83 members</p>
             <p className="absolute top-2 text-white/20 inline-flex items-center text-xs">Online <span className="ml-2 w-2 h-2 block bg-green-500 rounded-full group-hover:animate-pulse"></span></p>
         </div>
-        <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover">
+        <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover transition-all duration-300 hover:scale-110">
             <img className="w-20 h-20 object-cover object-center rounded-full" src={profileImage} alt="user" />
             <h4 className="text-white text-2xl font-bold capitalize text-center">Preety</h4>
             <p className="text-white/50">108 members</p>
