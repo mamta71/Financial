@@ -14,9 +14,9 @@ const Sidebar = () => {
           </Link>
 
           {/* Service */}
-          <a className="bg-gray-800 text-white p-4 inline-flex justify-center rounded-md" href="#">
+          <Link to="/budget" className="text-white/50 p-4 inline-flex justify-center rounded-md hover:bg-gray-800 hover:text-white smooth-hover">
             <Icon icon="carbon:web-services-container" width={32} height={32} />
-          </a>
+          </Link>
 
           {/* People */}
           <Link to="/user" className="text-white/50 p-4 inline-flex justify-center rounded-md hover:bg-gray-800 hover:text-white smooth-hover">
