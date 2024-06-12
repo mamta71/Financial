@@ -13,7 +13,7 @@ function DashboardPage() {
           <h4 className="text-black text-4xl font-bold capitalize text-center">
             80.5k
           </h4>
-          <p className="text-black/70 font-bold capitalize text-cente">
+          <p className="text-black/70 font-bold capitalize text-center">
            Views
           </p>
           <Icon icon="icon-park-outline:recent-views-sort"  width={32} height={32}/>
@@ -32,7 +32,7 @@ function DashboardPage() {
           <h4 className="text-black text-4xl font-bold capitalize text-center">
             80.5k
           </h4>
-          <p className="text-black/70 font-bold capitalize text-cente">
+          <p className="text-black/70 font-bold capitalize text-center">
             comments
           </p>
           <Icon icon="mdi:comments"  width={32} height={32}/>
