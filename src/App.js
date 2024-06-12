@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import AppRoutes from './routes'; // Import the AppRoutes component
+import AppRoutes from './routes'; 
 import Header from './components/layouts/Header';
 import Sidebar from './components/layouts/Sidebar';
 
