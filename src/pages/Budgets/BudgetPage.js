@@ -1,48 +1,3 @@
-//   const columns = [
-//     {
-//       name: "Title",
-//       selector: (row) => row.title,
-//     },
-//     {
-//       name: "Year",
-//       selector: (row) => row.year,
-//     },
-
-//     {
-//         name: "Description",
-//         selector: (row) => row.description,
-//       },
-
-//     {
-//         name: "Action",
-
-//       },
-//   ];
-
-//   const data = [
-//     {
-//       id: 1,
-//       title: "mamta",
-//       year: "2019",
-//       description:"hii hello ",
-//     },
-//     {
-//       id: 2,
-//       title: "anu",
-//       year: "2000",
-//       description:"nice",
-//     },
-//   ];
-//   return (
-//     <div>
-//       <div className="pt-4">
-//         <DataTable columns={columns} data={data} />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default BudgetPage;
 
 import React, { useState } from "react";
 import DataTable from "react-data-table-component";
@@ -105,6 +60,15 @@ const BudgetPage = () => {
     },
   ];
 
+  const conditionalRowStyles = [
+    {
+      when: row => true, // Apply to all rows
+      style: {
+      
+      },
+    },
+  ];
+
   return (
     <div>
       <div className="pt-6">
@@ -115,14 +79,20 @@ const BudgetPage = () => {
           value={search}
           onChange={handleSearch}
           style={{
+           
             marginBottom: "10px",
             padding: "5px",
             width: "30%",
             float: "inline-end",
-            backgroundColor:"brown"
+            background: "rgb(17 24 38 / var(--tw-bg-opacity))"
+            
           }}
         />
-        <DataTable columns={columns} data={filteredData} />
+       
+        <DataTable columns={columns} data={filteredData}   conditionalRowStyles={conditionalRowStyles}/>
+     
+       
+       
       </div>
     </div>
   );
