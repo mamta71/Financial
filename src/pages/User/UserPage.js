@@ -373,7 +373,7 @@ const UserPage = () => {
                     <li>
                       Enter Your Name
                     </li>
-                    <li>Rule 3: Do not share personal information.</li>
+                   
                    
                   </ul>
                 </div>
