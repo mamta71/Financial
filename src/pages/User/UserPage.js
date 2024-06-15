@@ -19,7 +19,7 @@ const UserPage = () => {
     <>
       <div className="mb-10 sm:mb-0 mt-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <div className="group bg-gray-900/30 py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/40 hover:smooth-hover">
-          <a
+          <a onClick={handleShowUserModal}
             className="bg-gray-900/70 text-white/50 group-hover:text-white group-hover:smooth-hover flex w-20 h-20 rounded-full items-center justify-center"
             href="#"
           >
@@ -38,20 +38,12 @@ const UserPage = () => {
               />
             </svg>
           </a>
-          <a
+          <a  onClick={handleShowUserModal}
             className="text-white/50 group-hover:text-white group-hover:smooth-hover text-center"
             href="#"
           >
             Add New User
           </a>
-
-          {/* <!-- Button trigger modal --> */}
-          <button
-            className="bg-blue-500 text-white px-4 py-2 rounded"
-            onClick={handleShowUserModal}
-          >
-            Launch demo modal
-          </button>
 
           {/* Show create user modal */}
           <CreateuserModal show={showUserModal} onCloseModal={handleCloseUserModal} />
