@@ -81,11 +81,8 @@ const UserPage = () => {
                 <span className="ml-2 w-2 h-2 block bg-green-500 rounded-full group-hover:animate-pulse animate-pulse"></span>
               </div>
               <Dropdown label="">
-                <Dropdown.Item>Dashboard</Dropdown.Item>
+                <Dropdown.Item>Profile</Dropdown.Item>
                 <Dropdown.Item>Settings</Dropdown.Item>
-                <Dropdown.Item>Earnings</Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item>Separated link</Dropdown.Item>
               </Dropdown>
             </div>
           </div>
