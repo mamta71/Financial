@@ -31,6 +31,18 @@ const BudgetPage = () => {
   const [search, setSearch] = useState("");
   const [filteredData, setFilteredData] = useState(data);
 
+  // const handleSearch = (event) => {
+  //   const searchTerm = event.target.value.toLowerCase();
+  //   setSearch(searchTerm);
+
+  //   const filtered = data.filter(
+  //     (item) =>
+  //       item.title.toLowerCase().includes(searchTerm) ||
+  //       item.year.toLowerCase().includes(searchTerm) ||
+  //       item.description.toLowerCase().includes(searchTerm)
+  //   );
+  //   setFilteredData(filtered);
+  // };
 
   const handleAction = (row) => {
     // Add your action handling logic here
