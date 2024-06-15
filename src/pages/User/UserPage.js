@@ -2,13 +2,19 @@
 import React, { useState } from "react";
 import profileImage from "../../assets/images/users/avatar.jpg";
 import { Dropdown } from "flowbite-react";
-
+import CreateuserModal from "./components/CreateuserModal";
 const UserPage = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  const [showUserModal, setShowUserModal] = useState(false);
+
+  const handleShowUserModal = () => {
+    setShowUserModal(true);
   };
+  const handleCloseUserModal = () => {
+    setShowUserModal(false);
+  };
+
+
   return (
     <>
       <div className="mb-10 sm:mb-0 mt-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -38,6 +44,17 @@ const UserPage = () => {
           >
             Add New User
           </a>
+
+          {/* <!-- Button trigger modal --> */}
+          <button
+            className="bg-blue-500 text-white px-4 py-2 rounded"
+            onClick={handleShowUserModal}
+          >
+            Launch demo modal
+          </button>
+
+          {/* Show create user modal */}
+          <CreateuserModal show={showUserModal} onCloseModal={handleCloseUserModal} />
         </div>
 
         {/* user container */}
@@ -78,7 +95,7 @@ const UserPage = () => {
           ></a>
         </div>
         <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover transition-all duration-300 hover:scale-110">
-        
+
           <img
             className="w-20 h-20 object-cover object-center rounded-full"
             src={profileImage}
@@ -105,7 +122,7 @@ const UserPage = () => {
           </div>
         </div>
         <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover transition-all duration-300 hover:scale-110">
-        
+
           <img
             className="w-20 h-20 object-cover object-center rounded-full"
             src={profileImage}
@@ -132,7 +149,7 @@ const UserPage = () => {
           </div>
         </div>
         <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover transition-all duration-300 hover:scale-110">
-        
+
           <img
             className="w-20 h-20 object-cover object-center rounded-full"
             src={profileImage}
