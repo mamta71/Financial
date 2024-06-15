@@ -78,25 +78,7 @@ const UserPage = () => {
           ></a>
         </div>
         <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover transition-all duration-300 hover:scale-110">
-          <a
-            className="bg-gray-900 text-white/50 p-2 rounded-md hover:text-white smooth-hover"
-            href="#"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 10h16M4 14h16M4 18h16"
-              />
-            </svg>
-          </a>
+        
           <img
             className="w-20 h-20 object-cover object-center rounded-full"
             src={profileImage}
@@ -123,25 +105,7 @@ const UserPage = () => {
           </div>
         </div>
         <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover transition-all duration-300 hover:scale-110">
-          <a
-            className="bg-gray-900 text-white/50 p-2 rounded-md hover:text-white smooth-hover"
-            href="#"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 10h16M4 14h16M4 18h16"
-              />
-            </svg>
-          </a>
+        
           <img
             className="w-20 h-20 object-cover object-center rounded-full"
             src={profileImage}
@@ -168,25 +132,7 @@ const UserPage = () => {
           </div>
         </div>
         <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover transition-all duration-300 hover:scale-110">
-          <a
-            className="bg-gray-900 text-white/50 p-2 rounded-md hover:text-white smooth-hover"
-            href="#"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 10h16M4 14h16M4 18h16"
-              />
-            </svg>
-          </a>
+        
           <img
             className="w-20 h-20 object-cover object-center rounded-full"
             src={profileImage}
