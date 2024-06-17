@@ -1,59 +1,55 @@
-
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DataTable from "react-data-table-component";
 import Breadcrumb from "../../components/layouts/Breadcrumb";
+import { Edit, Trash } from "react-feather";
+
 const BudgetPage = () => {
-
-  //--breadcrumb
-
+  // Breadcrumb items
   const breadcrumbItems = [
     { label: "Finance", link: "/" },
-    { label: "list", link: null },
+    { label: "List", link: null },
   ];
 
-  //-- table data
+  // Table data
   const data = [
-    {
-      id: 1,
-      title: "mamta",
-      year: "2019",
-      description: "hii hello",
-    },
-    {
-      id: 2,
-      title: "anu",
-      year: "2000",
-      description: "nice",
-    },
+    { id: 1, title: "mamta", year: "2019", description: "hii hello" },
+    { id: 2, title: "anu", year: "2000", description: "nice" },
   ];
 
   const [search, setSearch] = useState("");
   const [filteredData, setFilteredData] = useState(data);
 
+  // Handle search input change
+  const handleSearch = (event) => {
+    const value = event.target.value;
+    setSearch(value);
+    const filtered = data.filter((item) =>
+      item.title.toLowerCase().includes(value.toLowerCase())
+    );
+    setFilteredData(filtered);
+  };
 
-  const handleAction = (row) => {
-    // Add your action handling logic here
-    console.log("Edit row Delete row:", row);
+  // Handle edit action
+  const handleEdit = (row) => {
+    console.log("edit clicked", row);
+  };
+
+  // Handle delete action
+  const handleDelete = (row) => {
+    console.log("delete clicked", row);
   };
 
   const columns = [
-    {
-      name: "Title",
-      selector: (row) => row.title,
-    },
-    {
-      name: "Year",
-      selector: (row) => row.year,
-    },
-    {
-      name: "Description",
-      selector: (row) => row.description,
-    },
+    { name: "Title", selector: (row) => row.title, sortable: true },
+    { name: "Year", selector: (row) => row.year, sortable: true },
+    { name: "Description", selector: (row) => row.description, sortable: true },
     {
       name: "Action",
       cell: (row) => (
-        <button onClick={() => handleAction(row)}>Edit Delete</button>
+        <>
+          <Edit size={14} onClick={() => handleEdit(row)} style={{ marginRight: '10px' }} />
+          <Trash size={14} onClick={() => handleDelete(row)} />
+        </>
       ),
     },
   ];
@@ -62,38 +58,38 @@ const BudgetPage = () => {
     {
       when: row => true, // Apply to all rows
       style: {
-      
+        // Add your custom row styles here
       },
     },
   ];
 
   return (
     <div>
-      {/* //-- cal breadcrumb component */}
-      <Breadcrumb breadcrumbData={breadcrumbItems}/>
+      {/* Breadcrumb component */}
+      <Breadcrumb breadcrumbData={breadcrumbItems} />
 
       <div className="pt-6">
         <input
-          className="rounded-md "
+          className="rounded-md"
           type="text"
           placeholder="Search..."
           value={search}
-          // onChange={handleSearch}
+          onChange={handleSearch}
           style={{
-           
             marginBottom: "10px",
             padding: "5px",
             width: "30%",
-            float: "inline-end",
-            background: "rgb(17 24 38 / var(--tw-bg-opacity))"
-            
+            float: "right",
+            background: "rgb(17 24 38 / var(--tw-bg-opacity))",
+            color: "white",
           }}
         />
-       
-        <DataTable columns={columns} data={filteredData}   conditionalRowStyles={conditionalRowStyles}/>
-     
-       
-       
+
+        <DataTable
+          columns={columns}
+          data={filteredData}
+          conditionalRowStyles={conditionalRowStyles}
+        />
       </div>
     </div>
   );
