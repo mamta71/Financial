@@ -29,16 +29,32 @@
 
 .hSQKHD {
   cursor: pointer;
-  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, margin 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, margin 0.5s ease-in-out, background-color 0.5s ease-in-out;
   background-color: rgb(41, 54, 72) !important;
   margin-bottom: 10px;
   border-radius: 1rem;
-  width: 100%; /* Ensure initial width is defined */
+  width: 100%;
 }
 
 .hSQKHD:hover {
-  width: 98%;
-  transform: translateX(10px); 
-  margin-right: auto;
-  margin-left: auto;
+  transform: translateY(-10px);
+  margin-top: 4px;
+  background-color: rgb(17, 24, 39) !important;
+}
+
+
+div#\:r2\: {
+  z-index: 1;
+}
+
+/* styles.css */
+.search-input {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 30%;
+  float: right;
+  background: rgb(17 24 38 / var(--tw-bg-opacity));
+  color: white;
+  border: none; /* Optional: Remove default border */
+  border-radius: 4px; /* Optional: Add border radius */
 }
