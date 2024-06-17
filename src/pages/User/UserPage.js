@@ -3,8 +3,16 @@ import React, { useState } from "react";
 import profileImage from "../../assets/images/users/avatar.jpg";
 import { Dropdown } from "flowbite-react";
 import CreateuserModal from "./components/CreateuserModal";
+import Breadcrumb from "../../components/layouts/Breadcrumb";
+import ProfileuserModal from "./components/ProfileuserModal";
 const UserPage = () => {
+  // Breadcrumb items
+  const breadcrumbItems = [
+    { label: "User", link: "/user" },
+    { label: "Add User profile", link: null },
+  ];
 
+  // add modal
   const [showUserModal, setShowUserModal] = useState(false);
 
   const handleShowUserModal = () => {
@@ -14,12 +22,24 @@ const UserPage = () => {
     setShowUserModal(false);
   };
 
+  // edit modal
+  const [showProfileModal, setShowProfileModal] = useState(false);
+
+  const handleShowProfileModal = () => {
+    setShowProfileModal(true);
+  };
+  const handleCloseProfileModal = () => {
+    setShowProfileModal(false);
+  };
 
   return (
     <>
+      <Breadcrumb breadcrumbData={breadcrumbItems} />
+
       <div className="mb-10 sm:mb-0 mt-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <div className="group bg-gray-900/30 py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/40 hover:smooth-hover">
-          <a onClick={handleShowUserModal}
+          <a
+            onClick={handleShowUserModal}
             className="bg-gray-900/70 text-white/50 group-hover:text-white group-hover:smooth-hover flex w-20 h-20 rounded-full items-center justify-center"
             href="#"
           >
@@ -38,7 +58,7 @@ const UserPage = () => {
               />
             </svg>
           </a>
-          <a 
+          <a
             className="text-white/50 group-hover:text-white group-hover:smooth-hover text-center"
             href="#"
           >
@@ -46,7 +66,10 @@ const UserPage = () => {
           </a>
 
           {/* Show create user modal */}
-          <CreateuserModal show={showUserModal} onCloseModal={handleCloseUserModal} />
+          <CreateuserModal
+            show={showUserModal}
+            onCloseModal={handleCloseUserModal}
+          />
         </div>
 
         {/* user container */}
@@ -54,8 +77,7 @@ const UserPage = () => {
           <a
             className="bg-gray-900 text-white/50 p-2 rounded-md hover:text-white smooth-hover"
             href="#"
-          >
-          </a>
+          ></a>
           <img
             className="w-20 h-20 object-cover object-center rounded-full"
             src={profileImage}
@@ -73,18 +95,25 @@ const UserPage = () => {
                 <span className="ml-2 w-2 h-2 block bg-green-500 rounded-full group-hover:animate-pulse animate-pulse"></span>
               </div>
               <Dropdown label="">
-                <Dropdown.Item>Profile</Dropdown.Item>
+                <Dropdown.Item onClick={handleShowProfileModal}>
+                  Profile
+                </Dropdown.Item>
                 <Dropdown.Item>Settings</Dropdown.Item>
               </Dropdown>
+              {/* Show Edit user modal */}
+              <ProfileuserModal
+                show={showProfileModal}
+                onCloseModal={handleCloseProfileModal}
+              />
             </div>
           </div>
 
-          <a className="bg-gray-900 text-white/50 p-2 rounded-md hover:text-white smooth-hover"
+          <a
+            className="bg-gray-900 text-white/50 p-2 rounded-md hover:text-white smooth-hover"
             href="#"
           ></a>
         </div>
         <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover transition-all duration-300 hover:scale-110">
-
           <img
             className="w-20 h-20 object-cover object-center rounded-full"
             src={profileImage}
@@ -101,6 +130,7 @@ const UserPage = () => {
                 <span className="ml-2 w-2 h-2 block bg-green-500 rounded-full group-hover:animate-pulse animate-pulse"></span>
               </div>
               <Dropdown label="">
+                <Dropdown.Item >Profile</Dropdown.Item>
                 <Dropdown.Item>Dashboard</Dropdown.Item>
                 <Dropdown.Item>Settings</Dropdown.Item>
                 <Dropdown.Item>Earnings</Dropdown.Item>
@@ -111,7 +141,6 @@ const UserPage = () => {
           </div>
         </div>
         <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover transition-all duration-300 hover:scale-110">
-
           <img
             className="w-20 h-20 object-cover object-center rounded-full"
             src={profileImage}
@@ -128,6 +157,7 @@ const UserPage = () => {
                 <span className="ml-2 w-2 h-2 block bg-red-500 rounded-full group-hover:animate-pulse animate-pulse"></span>
               </div>
               <Dropdown label="">
+                <Dropdown.Item >Profile</Dropdown.Item>
                 <Dropdown.Item>Dashboard</Dropdown.Item>
                 <Dropdown.Item>Settings</Dropdown.Item>
                 <Dropdown.Item>Earnings</Dropdown.Item>
@@ -138,7 +168,6 @@ const UserPage = () => {
           </div>
         </div>
         <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover transition-all duration-300 hover:scale-110">
-
           <img
             className="w-20 h-20 object-cover object-center rounded-full"
             src={profileImage}
@@ -155,6 +184,7 @@ const UserPage = () => {
                 <span className="ml-2 w-2 h-2 block bg-green-500 rounded-full group-hover:animate-pulse animate-pulse"></span>
               </div>
               <Dropdown label="">
+                <Dropdown.Item >Profile</Dropdown.Item>
                 <Dropdown.Item>Dashboard</Dropdown.Item>
                 <Dropdown.Item>Settings</Dropdown.Item>
                 <Dropdown.Item>Earnings</Dropdown.Item>
@@ -181,6 +211,7 @@ const UserPage = () => {
                 <span className="ml-2 w-2 h-2 block bg-green-500 rounded-full group-hover:animate-pulse animate-pulse"></span>
               </div>
               <Dropdown label="">
+                <Dropdown.Item >Profile</Dropdown.Item>
                 <Dropdown.Item>Dashboard</Dropdown.Item>
                 <Dropdown.Item>Settings</Dropdown.Item>
                 <Dropdown.Item>Earnings</Dropdown.Item>
@@ -207,6 +238,7 @@ const UserPage = () => {
                 <span className="ml-2 w-2 h-2 block bg-green-500 rounded-full group-hover:animate-pulse animate-pulse"></span>
               </div>
               <Dropdown label="">
+                <Dropdown.Item >Profile</Dropdown.Item>
                 <Dropdown.Item>Dashboard</Dropdown.Item>
                 <Dropdown.Item>Settings</Dropdown.Item>
                 <Dropdown.Item>Earnings</Dropdown.Item>
@@ -233,7 +265,7 @@ const UserPage = () => {
                 <span className="ml-2 w-2 h-2 block bg-green-500 rounded-full group-hover:animate-pulse animate-pulse"></span>
               </div>
               <Dropdown label="">
-                <Dropdown.Item>Dashboard</Dropdown.Item>
+                 <Dropdown.Item>Dashboard</Dropdown.Item>
                 <Dropdown.Item>Settings</Dropdown.Item>
                 <Dropdown.Item>Earnings</Dropdown.Item>
                 <Dropdown.Divider />
