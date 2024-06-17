@@ -26,8 +26,8 @@ const ProfileuserModal = ({ show, onCloseModal }) => {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal header */}
-            <div className="flex justify-between items-center px-4 py-3 bg-gray-300 border-b border-gray-400">
-              <h5 className="text-xl font-medium text-gray-900">
+            <div className="flex justify-between items-center px-4 py-3 bg-white-300 border-b border-gray-500">
+              <h5 className="text-xl font-medium text-gray-500">
               Edit Profile
               </h5>
 
@@ -59,7 +59,7 @@ const ProfileuserModal = ({ show, onCloseModal }) => {
               {/* <p>Modal body text goes here.</p> */}
 
               <div className=" flex items-center justify-center w-full dark:bg-gray-950">
-                <div className="bg-white dark:bg-gray-900 rounded-lg  py-6 max-w-md">
+                <div className="bg-gray-800 dark:bg-gray-900 rounded-lg  py-6 max-w-md">
                   <form action="#">
                      </form>
                 </div>
@@ -67,7 +67,7 @@ const ProfileuserModal = ({ show, onCloseModal }) => {
             </div>
 
             {/* Modal footer */}
-            <div className="flex justify-end p-4 bg-gray-100 border-t border-gray-200">
+            <div className="flex justify-end p-4 bg-white-100 border-t border-white">
               <button
                 type="button"
                 className="inline-block px-4 py-2 mr-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"

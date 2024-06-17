@@ -22,12 +22,12 @@ const CreateuserModal = ({ show, onCloseModal }) => {
         >
           <div
             ref={modalRef}
-            className="relative bg-white rounded-md w-80 max-w-lg mx-4 sm:mx-auto"
+            className="relative bg-gray-800 rounded-md w-80 max-w-lg mx-4 sm:mx-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal header */}
-            <div className="flex justify-between items-center px-4 py-3 bg-gray-300 border-b border-gray-400">
-              <h5 className="text-xl font-medium text-gray-900">
+            <div className="flex justify-between items-center px-4 py-3 bg-[#1A384B]  border-b border-white-200">
+              <h5 className="text-xl font-medium text-gray-500">
                 Create New User
               </h5>
 
@@ -55,23 +55,23 @@ const CreateuserModal = ({ show, onCloseModal }) => {
             </div>
 
             {/* Modal body */}
-            <div className="p-2">
+          
               {/* <p>Modal body text goes here.</p> */}
 
-              <div className=" flex items-center justify-center w-full dark:bg-gray-950">
-                <div className="bg-white dark:bg-gray-900 rounded-lg  py-6 max-w-md">
+              <div className=" flex items-center justify-center w-full bg-[#1A384B] dark:bg-[#1A384B]">
+                <div className="bg-[#1A384B] dark:bg-[#1A384B] rounded-lg  py-6 max-w-md">
                   <form action="#">
                     <div className="mb-4">
                       <label
                         for="name"
-                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                        className="block text-sm font-medium text-white dark:text-gray-300 mb-2"
                       >
                         Name
                       </label>
                       <input
                         type="name"
                         id="name"
-                        className="shadow-sm rounded-md w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                        className="shadow-sm rounded-md w-full px-4 py-2 bg-gray-200 border border-gray-300 focus:outline-none focus:ring-pink-800 focus:border-pink-800"
                         placeholder="Enter your Name"
                         required
                       />
@@ -80,12 +80,12 @@ const CreateuserModal = ({ show, onCloseModal }) => {
                     <div className="mb-4">
                       <label
                         for="Profile"
-                        className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                        className="block text-sm font-medium text-white dark:text-gray-300 mb-2"
                       >
                         Profile
                       </label>
                       <input
-                        className="relative m-0 block w-full min-w-0 flex-auto cursor-pointer rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-xs font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
+                        className="relative bg-gray-200 m-0 block w-full min-w-0 flex-auto cursor-pointer rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-xs font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
                         id="formFileSm"
                         type="file"
                       />
@@ -93,10 +93,10 @@ const CreateuserModal = ({ show, onCloseModal }) => {
                   </form>
                 </div>
               </div>
-            </div>
+         
 
             {/* Modal footer */}
-            <div className="flex justify-end p-4 bg-gray-100 border-t border-gray-200">
+            <div className="flex justify-end p-4 bg-[#1A384B]  border-t border-white-200">
               <button
                 type="button"
                 className="inline-block px-4 py-2 mr-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
