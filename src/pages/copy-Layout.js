@@ -10,12 +10,12 @@ const Layout = () => {
       <div className="flex justify-end">
         <div className="bg-gray-100 w-[80%]">
           <div className="flex flex-col">
-         
+
             <Header />
           </div>
         </div>
       </div>
-{/* <Header/> */}
+      {/* <Header/> */}
       <Sidebar />
       <div className="flex justify-end p-4 bg-gray-100">
         <div className=" w-[80%]">

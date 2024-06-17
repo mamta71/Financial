@@ -28,7 +28,7 @@ const CreateuserModal = ({ show, onCloseModal }) => {
                         {/* Modal header */}
                         <div className="flex justify-between items-center px-4 py-3 bg-gray-100 border-b border-gray-200">
                             <h5 className="text-xl font-medium text-gray-900">
-                                Modal title
+                                Create New User
                             </h5>
                             <button
                                 type="button"
