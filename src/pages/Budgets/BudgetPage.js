@@ -31,12 +31,14 @@ const BudgetPage = () => {
 
   // Handle edit action
   const handleEdit = (row) => {
-    console.log("edit clicked", row);
+    console.log("Edit clicked", row);
+    alert("Edit clicked", row);
   };
 
   // Handle delete action
   const handleDelete = (row) => {
     console.log("delete clicked", row);
+    alert("Delete clicked", row);
   };
 
   const columns = [
@@ -54,14 +56,6 @@ const BudgetPage = () => {
     },
   ];
 
-  const conditionalRowStyles = [
-    {
-      when: row => true, // Apply to all rows
-      style: {
-        // Add your custom row styles here
-      },
-    },
-  ];
 
   return (
     <div>
@@ -88,7 +82,6 @@ const BudgetPage = () => {
         <DataTable
           columns={columns}
           data={filteredData}
-          conditionalRowStyles={conditionalRowStyles}
         />
       </div>
     </div>
