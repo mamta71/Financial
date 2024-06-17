@@ -29,8 +29,7 @@
 
 .hSQKHD {
   cursor: pointer;
-  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out,
-    margin 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, margin 0.5s ease-in-out, background-color 0.5s ease-in-out;
   background-color: rgb(41, 54, 72) !important;
   margin-bottom: 10px;
   border-radius: 1rem;
@@ -38,11 +37,11 @@
 }
 
 .hSQKHD:hover {
-  width: 98%;
-  transform: translateX(10px);
-  margin-right: auto;
-  margin-left: auto;
+  transform: translateY(-10px);
+  margin-top: 4px;
+  background-color: rgb(17, 24, 39) !important;
 }
+
 
 div#\:r2\: {
   z-index: 1;

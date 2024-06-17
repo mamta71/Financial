@@ -14,6 +14,8 @@ const BudgetPage = () => {
   const data = [
     { id: 1, title: "mamta", year: "2019", description: "hii hello" },
     { id: 2, title: "anu", year: "2000", description: "nice" },
+    { id: 3, title: "anu1", year: "2000", description: "nice" },
+    { id: 4, title: "anu2", year: "2000", description: "nice" },
   ];
 
   const [search, setSearch] = useState("");
@@ -41,7 +43,9 @@ const BudgetPage = () => {
     alert("Delete clicked", row);
   };
 
+  //-- Define all columns
   const columns = [
+    { name: "Id", selector: (row) => row.id, sortable: true },
     { name: "Title", selector: (row) => row.title, sortable: true },
     { name: "Year", selector: (row) => row.year, sortable: true },
     { name: "Description", selector: (row) => row.description, sortable: true },
@@ -55,7 +59,6 @@ const BudgetPage = () => {
       ),
     },
   ];
-
 
   return (
     <div>
