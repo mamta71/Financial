@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import DashboardPage from './pages/Dashboard/DashboardPage';
 import UserPage from './pages/User/UserPage';
 import BudgetPage from './pages/Budgets/BudgetPage';
+import CategoriesPage from './pages/Categories/CategoriesPage';
 
 const AppRoutes = () => {
   return (
@@ -12,6 +13,7 @@ const AppRoutes = () => {
       <Route path="/" element={<DashboardPage />} /> 
       <Route path="/user" element={<UserPage />} /> 
       <Route path="/budget" element={<BudgetPage />} />
+      <Route path="/Categories" element={<CategoriesPage />} />
     </Routes>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Breadcrumb = ({ breadcrumbData }) => {
     return (
@@ -21,9 +22,9 @@ const Breadcrumb = ({ breadcrumbData }) => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" stroke="currentColor" d="m1 9 4-4-4-4" />
                                 </svg>
                                 {item.link !== null ? (
-                                    <a href={item.link} className="ms-1 text-sm font-medium text-white hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">
-                                        {item.label}
-                                    </a>
+                                    <Link to={item.link} className="ms-1 text-sm font-medium text-white hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">
+                                     {item.label}
+                                    </Link>
                                 ) : (
                                     <span className="ms-1 text-sm font-medium text-white md:ms-2 dark:text-gray-400">
                                         {item.label}

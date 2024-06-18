@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import DataTable from "react-data-table-component";
 import Breadcrumb from "../../components/layouts/Breadcrumb";
 import { Edit, Trash } from "react-feather";
+import { useNavigate } from "react-router-dom";
 
 const BudgetPage = () => {
+  const navigate = useNavigate();
   // Breadcrumb items
   const breadcrumbItems = [
-    { label: "Finance", link: "/" },
+    { label: "Finance", link: "/budget" },
     { label: "List", link: null },
   ];
 
@@ -59,7 +61,11 @@ const BudgetPage = () => {
       name: "Action",
       cell: (row) => (
         <>
-          <Edit size={14} onClick={() => handleEdit(row)} style={{ marginRight: '10px' }} />
+          <Edit
+            size={14}
+            onClick={() => handleEdit(row)}
+            style={{ marginRight: "10px" }}
+          />
           <Trash size={14} onClick={() => handleDelete(row)} />
         </>
       ),
@@ -72,6 +78,14 @@ const BudgetPage = () => {
       <Breadcrumb breadcrumbData={breadcrumbItems} />
 
       <div className="pt-6">
+        <div className="flex justify-end items-center mb-2">
+          <button
+            onClick={() => navigate("/categories")}
+            className="bg-blue-500 text-white px-4 py-2 rounded-md"
+          >
+            Categories
+          </button>
+        </div>
         <input
           className="rounded-md"
           type="text"
@@ -93,7 +107,11 @@ const BudgetPage = () => {
           data={filteredData}
           pagination
           paginationPerPage={5}
-          
+          style={{
+            width: "30px",
+            float: "right",
+            background: "transparent",
+          }}
         />
       </div>
     </div>

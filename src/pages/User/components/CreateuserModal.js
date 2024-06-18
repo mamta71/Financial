@@ -108,7 +108,7 @@ const CreateuserModal = ({ show, onCloseModal }) => {
                 type="button"
                 className="inline-block px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600"
               >
-                Save changes
+                Save 
               </button>
             </div>
           </div>

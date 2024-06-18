@@ -26,7 +26,7 @@ const ProfileuserModal = ({ show, onCloseModal }) => {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal header */}
-            <div className="flex justify-between items-center px-4 py-3 bg-white-300 border-b border-gray-500">
+            <div className="flex justify-between items-center px-4 py-3 bg-[#1A384B] border-b border-white-200">
               <h5 className="text-xl font-medium text-gray-500">
               Edit Profile
               </h5>
@@ -67,7 +67,7 @@ const ProfileuserModal = ({ show, onCloseModal }) => {
             </div>
 
             {/* Modal footer */}
-            <div className="flex justify-end p-4 bg-white-100 border-t border-white">
+            <div className="flex justify-end p-4 bg-[#1A384B] border-t border-white">
               <button
                 type="button"
                 className="inline-block px-4 py-2 mr-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
