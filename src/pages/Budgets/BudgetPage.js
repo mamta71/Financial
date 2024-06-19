@@ -92,7 +92,7 @@ const BudgetPage = () => {
           columns={columns}
           data={filteredData}
           pagination
-          paginationPerPage={5}
+          paginationPerPage={2}
           
         />
       </div>
