@@ -9,7 +9,7 @@ const UserPage = () => {
   // Breadcrumb items
   const breadcrumbItems = [
     { label: "User", link: "/user" },
-    { label: "Add User profile", link: null },
+    { label: "list", link: null },
   ];
 
   // add modal

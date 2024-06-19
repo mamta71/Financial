@@ -53,10 +53,12 @@ const BudgetPage = () => {
 
   //-- Define all columns
   const columns = [
-    { name: "Id", selector: (row) => row.id, sortable: true },
-    { name: "Title", selector: (row) => row.title, sortable: true },
+    { name: "S.N", selector: (row) => row.id, sortable: true },
+    { name: "Budget Name", selector: (row) => row.title, sortable: true },
+    { name: "Budget Amount", selector: (row) => row.amount, sortable: true },
+    { name: "Image", selector: (row) => row.image, sortable: true },
     { name: "Year", selector: (row) => row.year, sortable: true },
-    { name: "Description", selector: (row) => row.description, sortable: true },
+    { name: "Budget Description", selector: (row) => row.description, sortable: true },
     {
       name: "Action",
       cell: (row) => (
@@ -76,9 +78,14 @@ const BudgetPage = () => {
     <div>
       {/* Breadcrumb component */}
       <Breadcrumb breadcrumbData={breadcrumbItems} />
-
       <div className="pt-6">
-        <div className="flex justify-end items-center mb-2">
+        <div className="flex justify-end gap-2 items-center mb-2">
+          <button
+            onClick={() => navigate("/AddBudgetPage")}
+            className="bg-blue-500 text-white px-4 py-2 rounded-md"
+          >
+           Add Budget
+          </button>
           <button
             onClick={() => navigate("/categories")}
             className="bg-blue-500 text-white px-4 py-2 rounded-md"

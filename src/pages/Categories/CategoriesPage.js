@@ -1,28 +1,43 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Edit, Trash } from "react-feather";
+import Breadcrumb from "../../components/layouts/Breadcrumb";
 const CategoriesPage = () => {
-    const navigate = useNavigate();
-    // Breadcrumb items
-    const breadcrumbItems = [
-      { label: "Finance", link: "/catagories" },
-      { label: "List", link: null },
-    ];
+  const navigate = useNavigate();
+  // Breadcrumb items
+  const breadcrumbItems = [
+    { label: "Categories", link: "/categories" },
+    { label: "Add", link: null },
+  ];
+
+  // Handle edit action
+  const handleEdit = (row) => {
+    console.log("Edit clicked", row);
+    alert("Edit clicked", row);
+  };
+
+  // Handle delete action
+  const handleDelete = (row) => {
+    console.log("delete clicked", row);
+    alert("Delete clicked", row);
+  };
   return (
     <div>
-      <h1 className="text-3xl font-bold text-white  mb-4 dark:text-gray-200">
-        New Categories
-      </h1>
+      <Breadcrumb breadcrumbData={breadcrumbItems} />
 
-      <div className="flex  justify-between gap-3 w-full dark:bg-gray-950">
-        <div className="bg-white dark:bg-gray-900 shadow-md rounded-lg px-6 py-6 w-[35%] ">
+      <h1 className="text-xl font-bold text-white  my-4 dark:text-gray-200">
+        Add New Category
+      </h1>
+      <div className="flex justify-between gap-3 w-full dark:bg-gray-950">
+        <div className="bg-[#1A384B]  text-white dark:bg-gray-900 shadow-md rounded-lg px-6 py-6 w-[35%] ">
           <h1 className="text-2xl font-bold  mb-4 dark:text-gray-200 border-b border-black-900">
-            Add Categories
+            Add Category
           </h1>
           <form action="#">
             <div className="mb-4">
               <label
                 for="Name"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                className="block text-sm font-medium text-white text-gray-700 dark:text-gray-300 mb-2"
               >
                 Name
               </label>
@@ -37,13 +52,13 @@ const CategoriesPage = () => {
             <div className="mb-4">
               <label
                 for="parent"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                class="block mb-2 text-sm font-medium text-white text-gray-900 dark:text-white"
               >
                 Select an option
               </label>
               <select
                 id="Parent"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-100 focus:border-blue-200 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="bg-gray-50  text-black border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-100 focus:border-blue-200 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
                 <option selected>Choose a parent</option>
                 <option value="US">United States</option>
@@ -55,7 +70,7 @@ const CategoriesPage = () => {
             <div className="mb-4">
               <label
                 for="Slug"
-                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                className="block text-sm text-white font-medium text-gray-700 dark:text-gray-300 mb-2"
               >
                 Slug
               </label>
@@ -70,7 +85,7 @@ const CategoriesPage = () => {
 
             <button
               type="submit"
-              className="flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="flex justify-center py-2 px-4  border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               Add New
             </button>
@@ -95,7 +110,7 @@ const CategoriesPage = () => {
             <button
               type="button"
               onClick
-              className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="bg-blue-500 text-white  px-4 py-2 rounded-lg hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Apply
             </button>
@@ -150,21 +165,25 @@ const CategoriesPage = () => {
                 >
                   Apple MacBook Pro 17"
                 </th>
-                <td className="px-6 py-4">Silver</td>
-                <td className="px-6 py-4">Laptop</td>
+                <td className="px-6 py-4">laptop</td>
+                <td className="px-6 py-4">sliver</td>
 
                 <td className="flex items-center px-6 py-4">
                   <a
                     href="#"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
-                    Edit
+                    <Edit
+                      size={14}
+                      onClick={() => handleEdit()}
+                      style={{ marginRight: "10px" }}
+                    />
                   </a>
                   <a
                     href="#"
                     className="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"
                   >
-                    Remove
+                    <Trash size={14} onClick={() => handleDelete()} />
                   </a>
                 </td>
               </tr>
@@ -187,21 +206,25 @@ const CategoriesPage = () => {
                 >
                   Microsoft Surface Pro
                 </th>
-                <td className="px-6 py-4">White</td>
-                <td className="px-6 py-4">Laptop PC</td>
+                <td className="px-6 py-4">mobile</td>
+                <td className="px-6 py-4">white</td>
 
                 <td className="flex items-center px-6 py-4">
                   <a
                     href="#"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
-                    Edit
+                    <Edit
+                      size={14}
+                      onClick={() => handleEdit()}
+                      style={{ marginRight: "10px" }}
+                    />
                   </a>
                   <a
                     href="#"
                     className="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"
                   >
-                    Remove
+                    <Trash size={14} onClick={() => handleDelete()} />
                   </a>
                 </td>
               </tr>
