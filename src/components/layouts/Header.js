@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <>
       <div className="flex justify-between items-center">
-        <h3 className="text-3xl font-extralight text-white/50">
+        <h3 className="text-3xl font-extralight text-white">
           Financial Management System
         </h3>
         <div className="inline-flex items-center space-x-2 ">
