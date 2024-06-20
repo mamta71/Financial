@@ -6,7 +6,7 @@ import DashboardPage from './pages/Dashboard/DashboardPage';
 import UserPage from './pages/User/UserPage';
 import BudgetPage from './pages/Budgets/BudgetPage';
 import CategoriesPage from './pages/Categories/CategoriesPage';
-import AddBudgetPage from './pages/Budgets/AddBudgetPage';
+import AddBudgetPage from './pages/Budgets/components/AddBudgetPage';
 
 const AppRoutes = () => {
   return (

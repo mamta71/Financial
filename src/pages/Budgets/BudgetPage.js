@@ -80,18 +80,19 @@ const BudgetPage = () => {
       <Breadcrumb breadcrumbData={breadcrumbItems} />
       <div className="pt-6">
         <div className="flex justify-end gap-2 items-center mb-2">
+        <button
+            onClick={() => navigate("/categories")}
+            className="bg-blue-500 text-white px-4 py-2 rounded-md"
+          >
+            Categories
+          </button>
           <button
             onClick={() => navigate("/AddBudgetPage")}
             className="bg-blue-500 text-white px-4 py-2 rounded-md"
           >
            Add Budget
           </button>
-          <button
-            onClick={() => navigate("/categories")}
-            className="bg-blue-500 text-white px-4 py-2 rounded-md"
-          >
-            Categories
-          </button>
+         
         </div>
         <input
           className="rounded-md"
