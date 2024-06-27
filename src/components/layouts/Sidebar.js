@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Icon } from "@iconify/react";
-import home from '@iconify-icons/mdi-light/home';
+import home from "@iconify-icons/mdi-light/home";
 
 const Sidebar = () => {
   return (
@@ -12,7 +12,9 @@ const Sidebar = () => {
           to="/"
           className={({ isActive }) =>
             `p-4 inline-flex justify-center rounded-md smooth-hover ${
-              isActive ? 'bg-gray-800 text-white' : 'text-white/50 hover:bg-gray-800 hover:text-white'
+              isActive
+                ? "bg-gray-800 text-white"
+                : "text-white/50 hover:bg-gray-800 hover:text-white"
             }`
           }
         >
@@ -24,7 +26,9 @@ const Sidebar = () => {
           to="/budget"
           className={({ isActive }) =>
             `p-4 inline-flex justify-center rounded-md smooth-hover ${
-              isActive ? 'bg-gray-800 text-white' : 'text-white/50  hover:bg-gray-800 hover:text-white'
+              isActive
+                ? "bg-gray-800 text-white"
+                : "text-white/50  hover:bg-gray-800 hover:text-white"
             }`
           }
         >
@@ -36,7 +40,9 @@ const Sidebar = () => {
           to="/user"
           className={({ isActive }) =>
             `p-4 inline-flex justify-center rounded-md smooth-hover ${
-              isActive ? 'bg-gray-800 text-white' : 'text-white/50  hover:bg-gray-800 hover:text-white'
+              isActive
+                ? "bg-gray-800 text-white"
+                : "text-white/50  hover:bg-gray-800 hover:text-white"
             }`
           }
         >
@@ -44,20 +50,19 @@ const Sidebar = () => {
         </NavLink>
 
         {/*Setting */}
-      <NavLink
-      to="/setting"
-      className={({ isActive }) =>
-        `p-4 inline-flex justify-center  rounded-md smooth-hover ${
-          isActive ? 'bg-gray-800 text-white' : 'text-white/50 hover:bg-gray-800 hover:text-white'
-        }`
-      }
-    >
-      <hr />
-      <Icon icon="uil:setting"  width={32} height={32} />
-      </NavLink>
+        <NavLink
+          to="/setting"
+          className={({ isActive }) =>
+            ` p-4 inline-flex justify-center  rounded-md smooth-hover mtop-10 ${
+              isActive
+                ? "bg-gray-800 text-white"
+                : "text-white/50 hover:bg-gray-800 hover:text-white"
+            }`
+          }
+        >
+          <Icon icon="uil:setting" width={32} height={32} />
+        </NavLink>
       </nav>
-
-     
 
       {/* <div className="flex items-center flex-row space-x-2 lg:space-x-0 lg:flex-col lg:space-y-2">
         <a className="text-white/50 p-4 inline-flex justify-center rounded-md hover:bg-gray-800 hover:text-white smooth-hover" href="#">
