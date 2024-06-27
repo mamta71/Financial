@@ -1,5 +1,6 @@
 import React from "react";
 import { Dropdown } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -9,7 +10,6 @@ const Header = () => {
           Financial Management System
         </h3>
         <div className="inline-flex items-center space-x-2 ">
-        
           <Dropdown
             label={
               <img
@@ -20,19 +20,19 @@ const Header = () => {
             }
             placement="bottom"
           >
-           
-              <Dropdown.Header className="px-4 ">
-                <span className="block text-sm"></span>
-                <span className="block text-sm">Suraj Suwal</span>
-                <span className="block truncate text-sm font-medium">
-                  surajsuwa@gmail.com
-                </span>
-              </Dropdown.Header>
+            <Dropdown.Header className="px-4 ">
+              <span className="block text-sm"></span>
+              <span className="block text-sm">Suraj Suwal</span>
+              <span className="block truncate text-sm font-medium">
+                surajsuwa@gmail.com
+              </span>
+            </Dropdown.Header>
 
-              <Dropdown.Item>Settings</Dropdown.Item>
-              <Dropdown.Divider />
-              <Dropdown.Item>Sign out</Dropdown.Item>
-           
+            <Dropdown.Item>Settings</Dropdown.Item>
+            <Dropdown.Divider />
+            <Dropdown.Item>
+              <Link to="/login">Logout </Link>
+            </Dropdown.Item>
           </Dropdown>
         </div>
       </div>
