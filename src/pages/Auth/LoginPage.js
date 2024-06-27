@@ -3,8 +3,8 @@ import React from "react";
 const LoginPage = () => {
   return (
     <div className="flex justify-center">
-      <div className="bg-[#1A384B]  text-white dark:bg-gray-900 shadow-md rounded-lg px-6 py-6 w-[35%] ">
-        <h1 className="text-2xl  flex justify-center font-bold mb-4 dark:text-gray-200 border-b border-black-900">
+      <div className="bg-[#1A384B]  text-white dark:bg-gray-900 shadow-md rounded-lg px-6 py-6 w-[400px] ">
+        <h1 className="text-2xl  flex justify-center font-bold mb-4 dark:text-gray-200 border-b border-black-900 pt-4 pb-6">
           Login Page
         </h1>
         <form action="#">
