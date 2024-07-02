@@ -9,7 +9,7 @@ const Sidebar = () => {
       <nav className="flex items-center flex-row space-x-2 lg:space-x-0 lg:flex-col lg:space-y-2">
         {/* Home */}
         <NavLink
-          to="/"
+          to="/dashboard"
           className={({ isActive }) =>
             `p-4 inline-flex justify-center rounded-md smooth-hover ${
               isActive

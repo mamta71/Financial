@@ -7,7 +7,7 @@ import { hover } from "@testing-library/user-event/dist/hover";
 
 function AppLayout() {
   const location = useLocation();
-  const showExceptLogin = location.pathname !== "/login";
+  const showExceptLogin = location.pathname !== "/";
 
   return (
     <div className="app min-h-80vh">

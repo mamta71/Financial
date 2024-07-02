@@ -28,7 +28,7 @@ const Header = () => {
               </span>
             </Dropdown.Header>
 
-            <Dropdown.Item>Settings</Dropdown.Item>
+            <Dropdown.Item> <Link to="/setting">Setting</Link></Dropdown.Item>
             <Dropdown.Divider />
             <Dropdown.Item>
               <Link to="/login">Logout </Link>

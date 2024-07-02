@@ -53,7 +53,7 @@ const SettingPage = () => {
                   type="text"
                   id="name"
                   className="shadow-sm rounded-md w-full text-black px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-                  placeholder="Fil Your Description"
+                  placeholder="Fill Your Description"
                   required
                 />
               </div>
@@ -69,7 +69,7 @@ const SettingPage = () => {
                   type="text"
                   id="name"
                   className="shadow-sm rounded-md w-full text-black px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-                  placeholder="Fil Your total Amount"
+                  placeholder="Fill Your total Amount"
                   required
                 />
               </div>
