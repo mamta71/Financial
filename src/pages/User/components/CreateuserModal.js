@@ -17,7 +17,7 @@ const CreateuserModal = ({ show, onCloseModal }) => {
     <>
       {show && (
         <div
-          className="fixed inset-0 z-50 overflow-y-auto overflow-x-hidden outline-none bg-gray-800 bg-opacity-50 flex justify-center items-center"
+          className="fixed inset-0 z-50 overflow-y-auto overflow-x-hidden outline-none bg-gray-800 bg-opacity-50 flex justify-center items-center rounded-md"
           onClick={handleBackdropClick}
         >
           <div
@@ -26,8 +26,8 @@ const CreateuserModal = ({ show, onCloseModal }) => {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal header */}
-            <div className="flex justify-between items-center px-4 py-3 bg-[#1A384B]  border-b border-white-200">
-              <h5 className="text-xl font-medium text-gray-500">
+            <div className="flex justify-between items-center px-4 py-3 bg-[#1A384B] rounded-lg  border-b border-white-200">
+              <h5 className="text-xl font-medium text-white">
                 Create New User
               </h5>
 

@@ -30,13 +30,13 @@ const data = {
       label: 'Dataset 1',
       data: [10, 30, 50, 20, 25, 44, -10],
       borderColor: 'rgba(255, 99, 132, 1)',
-      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      backgroundColor: '#831843',
     },
     {
       label: 'Dataset 2',
       data: [100, 33, 22, 19, 11, 49, 30],
       borderColor: 'rgba(54, 162, 235, 1)',
-      backgroundColor: 'rgba(54, 162, 235, 0.2)',
+      backgroundColor: '#047857',
     }
   ]
 };
@@ -44,7 +44,7 @@ const data = {
 // Chart options
 const options = {
   responsive: true,
-  plugins: {
+ plugins: {
     title: {
       display: true,
       text: 'Min and Max Settings'
@@ -109,7 +109,7 @@ function DashboardPage() {
       </div>
 
       {/* Chart Section */}
-      <div className="py-4 px-6 bg-white rounded-md shadow-md mt-10">
+      <div className="w-100">
         <Bar data={data} options={options} />
       </div>
     </>

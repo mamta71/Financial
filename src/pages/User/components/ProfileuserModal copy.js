@@ -13,7 +13,7 @@ const UserPage = () => {
     { label: "User", link: "/user" },
     { label: "list", link: null },
   ];
-  
+
   // add modal
   const [showUserModal, setShowUserModal] = useState(false);
 
@@ -24,18 +24,18 @@ const UserPage = () => {
     setShowUserModal(false);
   };
 
+  const [openModal, setOpenModal] = useState(true);
+
+
   // edit modal
   const [showProfileModal, setShowProfileModal] = useState(false);
 
-
-  
   const handleShowProfileModal = () => {
     setShowProfileModal(true);
   };
   const handleCloseProfileModal = () => {
     setShowProfileModal(false);
   };
-
 
   return (
     <>
@@ -71,63 +71,10 @@ const UserPage = () => {
           </a>
 
           {/* Show create user modal */}
-          { <CreateuserModal
+          <CreateuserModal
             show={showUserModal}
             onCloseModal={handleCloseUserModal}
-          /> }
-
-          {/* <>
-            <Button onClick={() => setShowProfileModal(true)}>Toggle modal</Button>
-            <Modal
-              dismissible
-              show={showProfileModal}
-              size="md" 
-              onClose={() => setShowProfileModal(false)}
-            >
-              <Modal.Header  className="text-xl font-medium bg-gray-700">Terms of Service</Modal.Header>
-              <Modal.Body className=" flex items-center justify-center w-full bg-[#1A384B] dark:bg-[#1A384B]">
-              <div className="bg-[#1A384B] dark:bg-[#1A384B] rounded-lg  py-6 max-w-md">
-
-              <form action="#">
-                    <div className="mb-4">
-                      <label
-                        for="name"
-                        className="block text-sm font-medium text-white dark:text-gray-300 mb-2"
-                      >
-                        UserName
-                      </label>
-                      <input
-                        type="name"
-                        id="name"
-                        className="shadow-sm text-black rounded-md w-full px-4 py-2 bg-gray-200 border border-gray-300 focus:outline-none focus:ring-pink-800 focus:border-pink-800"
-                        placeholder="Enter your Name"
-                        required
-                      />
-                    </div>
-
-                    <div className="mb-4">
-                      <label
-                        for="Profile"
-                        className="block text-sm font-medium text-white dark:text-gray-300 mb-2"
-                      >
-                        Edit Profile
-                      </label>
-                      <input
-                        className="relative bg-gray-200 m-0 block w-full min-w-0 flex-auto cursor-pointer rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-xs font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
-                        id="formFileSm"
-                        type="file"
-                      />
-                    </div>
-                  </form>
-                  </div>
-              </Modal.Body>
-              <Modal.Footer className="flex justify-end p-4 bg-[#1A384B] rounded-lg  border-t border-white-200">
-                <Button color="gray"  className="inline-block px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600" onClick={() => setShowProfileModal(false)} >
-                  Decline
-                </Button>
-              </Modal.Footer>
-            </Modal>
-          </> */}
+          />
         </div>
 
         {/* user container */}
@@ -153,18 +100,59 @@ const UserPage = () => {
                 <span className="ml-2 w-2 h-2 block bg-green-500 rounded-full group-hover:animate-pulse animate-pulse"></span>
               </div>
               <Dropdown label="">
-                <Dropdown.Item onClick={() => setShowProfileModal(true)}>
+                <Dropdown.Item onClick={handleShowProfileModal}>
                   View
                 </Dropdown.Item>
                 <Dropdown.Item>Settings</Dropdown.Item>
               </Dropdown>
-             
+              {/* Show Edit user modal */}
+              {/* <ProfileuserModal
+                show={showProfileModal}
+                onCloseModal={handleCloseProfileModal}
+              /> */}
 
-{/* Show Edit Profile modal */}
-{ <ProfileuserModal showProfileModal={showProfileModal} setShowProfileModal={setShowProfileModal}
-            show={showProfileModal} 
-            onCloseModal={handleCloseProfileModal}
-          /> }             
+              {showProfileModal && (
+
+                <div>
+                  <>
+                    <Button onClick={() => setOpenModal(true)}>
+                      Toggle modal
+                    </Button>
+                    <Modal show={openModal} onClose={() => setOpenModal(false)}>
+                      <Modal.Header>Terms of Service</Modal.Header>
+                      <Modal.Body>
+                        <div className="space-y-6">
+                          <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                            With less than a month to go before the European
+                            Union enacts new consumer privacy laws for its
+                            citizens, companies around the world are updating
+                            their terms of service agreements to comply.
+                          </p>
+                          <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                            The European Union’s General Data Protection
+                            Regulation (G.D.P.R.) goes into effect on May 25 and
+                            is meant to ensure a common set of data rights in
+                            the European Union. It requires organizations to
+                            notify users as soon as possible of high-risk data
+                            breaches that could personally affect them.
+                          </p>
+                        </div>
+                      </Modal.Body>
+                      <Modal.Footer>
+                        <Button onClick={() => setOpenModal(false)}>
+                          I accept
+                        </Button>
+                        <Button
+                          color="gray"
+                          onClick={() => setOpenModal(false)}
+                        >
+                          Decline
+                        </Button>
+                      </Modal.Footer>
+                    </Modal>
+                  </>
+                </div>
+              )}
             </div>
           </div>
 

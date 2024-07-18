@@ -49,8 +49,22 @@ const Sidebar = () => {
           <Icon icon="ion:people-outline" width={32} height={32} />
         </NavLink>
 
-        {/*Setting */}
+        {/*BudgetGroup */}
         <NavLink
+          to="/budgetgroup"
+          className={({ isActive }) =>
+            ` p-4 inline-flex justify-center  rounded-md smooth-hover mtop-10 ${
+              isActive
+                ? "bg-gray-800 text-white"
+                : "text-white/50 hover:bg-gray-800 hover:text-white"
+            }`
+          }
+        >
+          <Icon icon="mingcute:group-3-line" width={32} height={32} />
+        </NavLink>
+
+         {/*Setting */}
+         <NavLink
           to="/setting"
           className={({ isActive }) =>
             ` p-4 inline-flex justify-center  rounded-md smooth-hover mtop-10 ${

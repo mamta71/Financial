@@ -13,14 +13,14 @@ const Header = () => {
           <Dropdown
             label={
               <img
-                className="h-10 w-10 rounded-full "
+                className="h-6 w-6 rounded-full "
                 src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
                 alt="Jese Leos"
               />
             }
             placement="bottom"
           >
-            <Dropdown.Header className="px-4 ">
+            <Dropdown.Header className="px-2 ">
               <span className="block text-sm"></span>
               <span className="block text-sm">Suraj Suwal</span>
               <span className="block truncate text-sm font-medium">

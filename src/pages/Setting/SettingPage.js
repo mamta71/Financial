@@ -24,7 +24,7 @@ const SettingPage = () => {
             Gerenal Setting
           </h1>
           <form action="#">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="gap-4">
               {/* Site Title */}
               <div className="mb-4">
                 <label
@@ -36,7 +36,7 @@ const SettingPage = () => {
                 <input
                   type="text"
                   id="name"
-                  className="shadow-sm rounded-md w-full text-black px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                  className="shadow-sm rounded-md w-[50%] text-black px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                   placeholder="Enter Your Site Title"
                   required
                 />
@@ -44,6 +44,7 @@ const SettingPage = () => {
               {/* Site Description*/}
               <div className="mb-4">
                 <label
+               
                   htmlFor="Site Description"
                   className="block text-sm font-medium text-white text-gray-700 dark:text-gray-300 mb-2"
                 >
@@ -52,12 +53,12 @@ const SettingPage = () => {
                 <input
                   type="text"
                   id="name"
-                  className="shadow-sm rounded-md w-full text-black px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                  className="shadow-sm rounded-md w-[50%] text-black px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                   placeholder="Fill Your Description"
                   required
                 />
               </div>
-              {/* Total Amount*/}
+              {/* Total Amount
               <div className="mb-4">
                 <label
                   htmlFor="Amount"
@@ -77,7 +78,7 @@ const SettingPage = () => {
               {/* Time*/}
 
               {/* Date*/}
-              <div className="mb-4 ">
+              {/* <div className="mb-4 ">
                 <label
                   htmlFor="Year"
                   className="block mb-2 text-sm font-medium text-white text-gray-900 dark:text-white"
@@ -89,9 +90,9 @@ const SettingPage = () => {
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
                 />
-              </div>
+              </div> */}
               {/* Budget Description*/}
-              <div className="mb-4">
+              {/* <div className="mb-4">
                 <label
                   htmlFor="Budget Description"
                   className="block text-sm text-white font-medium text-gray-700 dark:text-gray-300 mb-2"
@@ -105,18 +106,18 @@ const SettingPage = () => {
                   placeholder="Fill Your Budget description"
                   required
                 />
-              </div>
+              </div> */} 
 
-              {/* Related Document*/}
+              {/* Related Logo*/}
               <div className="mb-4 col-span-2">
                 <label
                   htmlFor="Document"
                   className="block text-sm text-white font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
-                  Related Document
+                  Related Logo
                 </label>
                 <input
-                  className="relative bg-gray-200 m-0 block w-full min-w-0 flex-auto cursor-pointer rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-xs font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
+                  className="relative bg-gray-200 m-0 block w-[80%] min-w-0 flex-auto cursor-pointer rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-xs font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
                   id="formFileSm"
                   type="file"
                 />

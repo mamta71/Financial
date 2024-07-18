@@ -17,7 +17,7 @@ const CategoryForm = () => {
           <input
             type="name"
             id="name"
-            className="shadow-sm rounded-md w-full px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            className="shadow-sm rounded-md text-black w-full px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             placeholder="Category Name"
             required
           />
@@ -32,7 +32,7 @@ const CategoryForm = () => {
           <input
             type="slug"
             id="slug"
-            className="shadow-sm rounded-md w-full px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            className="shadow-sm rounded-md text-black w-full px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             placeholder="Category Slug"
             required
           />
