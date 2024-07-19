@@ -78,3 +78,32 @@ div#\:r2\: {
 .chart-section canvas{
   width: 100% !important;
 }
+
+.custom-dropdown {
+  background-color: rgb(17, 24, 39);
+}
+
+.custom-dropdown .dropdown-item {
+  color: white;
+  font-weight: bold; /* Make text bold */
+}
+
+.custom-dropdown .dropdown-item:hover {
+  
+  background-color: white; /* Optional: to add a hover effect */
+  color: white; /* Ensure text remains white on hover */
+}
+  .border {
+    border-width: 1px;
+}
+
+.rounded {
+    border-radius: 1rem;
+}
+
+
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: #fff;
+}
+

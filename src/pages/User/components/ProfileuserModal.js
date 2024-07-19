@@ -2,7 +2,12 @@ import React, { useRef } from "react";
 import { useState } from "react";
 import { Button, Modal } from "flowbite-react";
 
-const ProfileuserModal = ({ show, onCloseModal, setShowProfileModal, showProfileModal }) => {
+const ProfileuserModal = ({
+  show,
+  onCloseModal,
+  setShowProfileModal,
+  showProfileModal,
+}) => {
   const modalRef = useRef(null);
 
   const handleClose = () => {
@@ -14,8 +19,6 @@ const ProfileuserModal = ({ show, onCloseModal, setShowProfileModal, showProfile
       handleClose();
     }
   };
-
-  
 
   return (
     // <>
@@ -115,20 +118,17 @@ const ProfileuserModal = ({ show, onCloseModal, setShowProfileModal, showProfile
     //     </div>
     //   )}
     // </>
-
     <Modal
       dismissible
       show={showProfileModal}
-      size="md"
+      size="sm"
       onClose={() => setShowProfileModal(false)}
     >
-      <Modal.Header className="flex justify-between items-center px-4 py-3 bg-[#1A384B]  rounded-lg border-b border-white-200">
-      <h5 className="text-xl font-medium text-white">
-                 Edit User
-             </h5>
+      <Modal.Header className="flex justify-between items-center px-2 py-4   bg-[#1A384B]  rounded-lg border-b border-white-200">
+        <h5 className="text-xl font-medium text-white">Edit User</h5>    
       </Modal.Header>
-      <Modal.Body className=" flex items-center justify-center w-full bg-[#1A384B] dark:bg-[#1A384B]">
-        <div className="bg-[#1A384B] dark:bg-[#1A384B] rounded-lg  py-6 max-w-md">
+      <Modal.Body className=" flex items-center justify-center  bg-[#1A384B] dark:bg-[#1A384B]">
+        <div className="bg-[#1A384B] dark:bg-[#1A384B] rounded-lg  py-2 max-w-md">
           <form action="#">
             <div className="mb-4">
               <label
@@ -140,7 +140,7 @@ const ProfileuserModal = ({ show, onCloseModal, setShowProfileModal, showProfile
               <input
                 type="name"
                 id="name"
-                className="shadow-sm text-black rounded-md w-full px-4 py-2 bg-gray-200 border border-gray-300 focus:outline-none focus:ring-pink-800 focus:border-pink-800"
+                className="shadow-sm text-black rounded-md w-[80%] px-4 py-2 bg-gray-200 border border-gray-300 focus:outline-none focus:ring-pink-800 focus:border-pink-800"
                 placeholder="Enter your Name"
                 required
               />
@@ -162,15 +162,16 @@ const ProfileuserModal = ({ show, onCloseModal, setShowProfileModal, showProfile
           </form>
         </div>
       </Modal.Body>
-      <Modal.Footer className="flex justify-end p-4 bg-[#1A384B] rounded-lg  border-t border-white-200">
+      <Modal.Footer className="flex justify-end p-4 bg-[#1A384B]  rounded-lg  border-t border-white-200">
         <Button
           color="gray"
-          className="inline-block px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600"
+          className="inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600"
           onClick={() => setShowProfileModal(false)}
-        >Save
+        >
+          Save
         </Button>
-      </Modal.Footer>
-    </Modal>
+      </Modal.Footer> 
+    </Modal>  
   );
 };
 
