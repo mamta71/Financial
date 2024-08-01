@@ -1,5 +1,5 @@
 .kzZBXj {
-  font-size: 20px;
+  font-size: 10px;
   color: #252578;
 }
 
@@ -80,7 +80,7 @@ div#\:r2\: {
 }
 
 .custom-dropdown {
-  background-color: rgb(17, 24, 39);
+  background-color:  #1f2937;
 }
 
 .custom-dropdown .dropdown-item {
@@ -98,12 +98,21 @@ div#\:r2\: {
 }
 
 .rounded {
-    border-radius: 1rem;
+    border-radius: -3rem;
 }
-
 
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: #fff;
 }
 
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: #1f2937;
+}
+
+//edit modal
+.max-w-md {
+  max-width: 22rem;
+}

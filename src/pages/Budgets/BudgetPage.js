@@ -13,17 +13,25 @@ const BudgetPage = () => {
   ];
 
   // Table data
+
+  // const data = 
   const data = [
-    { id: 1, title: "mamta", year: "2019", description: "hii hello" },
-    { id: 2, title: "anu", year: "2001", description: "nice" },
-    { id: 3, title: "anu1", year: "2002", description: "nice" },
-    { id: 4, title: "anu2", year: "2003", description: "nice" },
-    { id: 5, title: "ram", year: "2004", description: "nice" },
-    { id: 6, title: "sita", year: "2005", description: "nice" },
-    { id: 7, title: "hari", year: "2006", description: "nice" },
-    { id: 8, title: "shyam", year: "2007", description: "nice" },
-    { id: 9, title: "gita", year: "2008", description: "nice" },
-    { id: 10, title: "rita", year: "2009", description: "nice" },
+    { 
+      id: 1,
+       title: "mamta",
+       amount: "1500",
+        year: "2019",
+         description: "hii hello"
+        },
+    { id: 2, title: "anu", amount: "1400", year: "2001", description: "nice" },
+    { id: 3, title: "anu1", amount: "500", amount: "1500", year: "2002", description: "nice" },
+    { id: 4, title: "anu2",amount: "150",  year: "2003", description: "nice" },
+    { id: 5, title: "ram", amount: "100", year: "2004", description: "nice" },
+    { id: 6, title: "sita",amount: "107", year: "2005", description: "nice" },
+    { id: 7, title: "hari", amount: "1100", year: "2006", description: "nice" },
+    { id: 8, title: "shyam",amount: "1400",  year: "2007", description: "nice" },
+    { id: 9, title: "gita", amount: "2500", year: "2008", description: "nice" },
+    { id: 10, title: "rita", amount: "300", year: "2009", description: "nice" },
   ];
 
   const [search, setSearch] = useState("");

@@ -6,6 +6,7 @@ import CreateuserModal from "./components/CreateuserModal";
 import Breadcrumb from "../../components/layouts/Breadcrumb";
 import ProfileuserModal from "./components/ProfileuserModal";
 import { Button, Modal } from "flowbite-react";
+import { Link } from "react-feather";
 
 const UserPage = () => {
   // Breadcrumb items
@@ -104,7 +105,7 @@ const UserPage = () => {
                 <Dropdown.Item onClick={() => setShowProfileModal(true)}>
                   View
                 </Dropdown.Item>
-                <Dropdown.Item>Settings</Dropdown.Item>
+                <Dropdown.Item> <Link to="/setting">Setting</Link></Dropdown.Item>
                 </div>
               </Dropdown>
 
@@ -143,7 +144,8 @@ const UserPage = () => {
               </div>
               <Dropdown label="">
                 <Dropdown.Item>Dashboard</Dropdown.Item>
-                <Dropdown.Item>Settings</Dropdown.Item>
+                <Dropdown.Item> <Link to="/setting">Setting</Link></Dropdown.Item>
+                
                 <Dropdown.Item>Earnings</Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item>Separated link</Dropdown.Item>
@@ -169,7 +171,7 @@ const UserPage = () => {
               </div>
               <Dropdown label="">
                 <Dropdown.Item>Dashboard</Dropdown.Item>
-                <Dropdown.Item>Settings</Dropdown.Item>
+                <Dropdown.Item> <Link to="/setting">Setting</Link></Dropdown.Item>
                 <Dropdown.Item>Earnings</Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item>Separated link</Dropdown.Item>
@@ -195,7 +197,7 @@ const UserPage = () => {
               </div>
               <Dropdown label="">
                 <Dropdown.Item>Dashboard</Dropdown.Item>
-                <Dropdown.Item>Settings</Dropdown.Item>
+                <Dropdown.Item> <Link to="/setting">Setting</Link></Dropdown.Item>
                 <Dropdown.Item>Earnings</Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item>Separated link</Dropdown.Item>
@@ -221,7 +223,7 @@ const UserPage = () => {
               </div>
               <Dropdown label="">
                 <Dropdown.Item>Dashboard</Dropdown.Item>
-                <Dropdown.Item>Settings</Dropdown.Item>
+                <Dropdown.Item> <Link to="/setting">Setting</Link></Dropdown.Item>
                 <Dropdown.Item>Earnings</Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item>Separated link</Dropdown.Item>
@@ -247,7 +249,7 @@ const UserPage = () => {
               </div>
               <Dropdown label="">
                 <Dropdown.Item>Dashboard</Dropdown.Item>
-                <Dropdown.Item>Settings</Dropdown.Item>
+                <Dropdown.Item> <Link to="/setting">Setting</Link></Dropdown.Item>
                 <Dropdown.Item>Earnings</Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item>Separated link</Dropdown.Item>
@@ -273,7 +275,7 @@ const UserPage = () => {
               </div>
               <Dropdown label="">
                 <Dropdown.Item>Dashboard</Dropdown.Item>
-                <Dropdown.Item>Settings</Dropdown.Item>
+                <Dropdown.Item> <Link to="/setting">Setting</Link></Dropdown.Item>
                 <Dropdown.Item>Earnings</Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item>Separated link</Dropdown.Item>

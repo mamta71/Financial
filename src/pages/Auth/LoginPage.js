@@ -69,7 +69,7 @@ const LoginPage = () => {
 
           {/* Remember Me Checkbox */}
           <div className="mt-3">
-            <label>
+            <label> 
               <input
                 type="checkbox"
                 checked={rememberMe}

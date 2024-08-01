@@ -7,6 +7,7 @@ import Breadcrumb from "../../components/layouts/Breadcrumb";
 import ProfileuserModal from "./components/ProfileuserModal";
 import { Button, Modal } from "flowbite-react";
 
+
 const UserPage = () => {
   // Breadcrumb items
   const breadcrumbItems = [
